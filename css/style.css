@@ -124,6 +124,21 @@ b {
   border-color: transparent;
   font: 18px/36px 'visby_cfdemi_bold';
 }
+.custom-button.custom-button-form-login {
+  height: 40px;
+  padding: 0 25px;
+  color: #ffffff;
+  background: #4a4e7d;
+  width: 100%;
+  border-color: #4a4e7d;
+  text-align: center;
+  text-transform: uppercase;
+  font: 16px/36px 'visby_cfextra_bold';
+}
+.custom-button.custom-button-form-login:hover {
+  background: transparent;
+  color: #4a4e7d;
+}
 .custom-button.custom-button-light-green {
   background: #3ae5c4;
   color: #474b7a;
@@ -153,6 +168,7 @@ b {
   top: 0;
   left: 0;
   position: absolute;
+  z-index: 9;
 }
 .header .header-menu .header-menu__logo {
   position: absolute;
@@ -223,6 +239,116 @@ b {
 .header .header-menu .header-menu__buttons .login-button {
   float: right;
   position: relative;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal {
+  width: 500px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 999;
+  padding: 0 0 0 195px;
+  padding-top: 15px;
+  display: none;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal:before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  right: 50px;
+  border: 15px solid transparent;
+  border-bottom: 12px solid #ffffff;
+  z-index: 2;
+  margin-bottom: -15px;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__info {
+  width: 195px;
+  position: absolute;
+  padding: 35px;
+  left: 0;
+  top: 15px;
+  height: calc(100% - 15px);
+  -webkit-border-radius: 30px 0 0 30px;
+  -moz-border-radius: 30px 0 0 30px;
+  border-radius: 30px 0 0 30px;
+  background: url("../img/login-form-bg.png") no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__info .modal-info__title {
+  font: 22px/22px 'visby_cfheavy';
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__info .modal-info__sub-title {
+  font: 14px/17px 'visby_cfdemi_bold';
+  color: #ffffff;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__form {
+  width: 100%;
+  float: left;
+  padding: 35px;
+  -webkit-border-radius: 0 30px 30px 0;
+  -moz-border-radius: 0 30px 30px 0;
+  border-radius: 0 30px 30px 0;
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__form .close-modal__link {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: #000;
+  font-size: 20px;
+  display: none;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__form .login-form__input {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__form .login-form__input label {
+  font: 14px/17px 'visby_cfdemi_bold';
+  color: #474b7a;
+  margin-bottom: 6px;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__form .login-form__input input {
+  width: 100%;
+  float: left;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #545454;
+  font: 14px 'visby_cfitalic';
+  color: #545454;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__form .login-form__input.login-form__input-password a {
+  font: 12px/30px 'visby_cfdemi_bold';
+  color: #0084ff;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 16px;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__form .login-form__input.login-form__input-button {
+  margin-bottom: 0;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__form .login-form__input.login-form__input-button span {
+  display: block;
+  margin: 30px 0;
+  text-align: center;
+  font: 16px/16px 'visby_cfextra_bold';
+  color: #4a4e7d;
+  text-transform: uppercase;
+}
+.header .header-menu .header-menu__buttons .login-button .login-modal .login-modal__form .login-form__input.login-form__input-button p {
+  font: 14px/18px 'visby_cfregular';
+  color: #4a4e7d;
+  text-align: center;
+}
+.header .header-menu .header-menu__buttons .login-button:hover .login-modal {
+  display: block;
 }
 .header .header__images {
   position: absolute;
