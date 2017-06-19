@@ -25,7 +25,6 @@ $(document).ready(function() {
         var $frame = $('.package-frame');
         var $wrap  = $frame.parent();
         var length  = $frame.find('.packages__item').length;
-        console.log(Math.round(length / 2));
 
         // Call Sly on frame
         $frame.sly({
@@ -48,6 +47,75 @@ $(document).ready(function() {
             startAt: (Math.round(length / 2) - 1)
         });
     }());
+    $('.slick-carousel').slick({
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        autoplay: false,
+        centerMode: true,
+        centerPadding: '30px',
+        responsive: [
+            {
+                breakpoint: 740,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+    $('.service-carousel').slick({
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        autoplay: false,
+        centerMode: true,
+        centerPadding: '30px',
+        responsive: [
+            {
+                breakpoint: 740,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+    $('.packages-carousel').slick({
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: false,
+        autoplay: false,
+        centerMode: true,
+        centerPadding: '180px',
+        responsive: [
+            {
+                breakpoint: 510,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '30px'
+                }
+            }
+        ]
+    });
+    $('.header-menu__burger').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.header-menu__login').removeClass('active');
+        $('.header-menu__login-form').removeClass('open-login');
+        $('.header-menu__list').toggleClass('open-nav');
+    });
+    $('.header-menu__login').on('click', function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.header-menu__burger').removeClass('active');
+        $('.header-menu__list').removeClass('open-nav');
+        $('.header-menu__login-form').toggleClass('open-login');
+    });
 });
 $(window).resize(function() {
     carouselSize();
